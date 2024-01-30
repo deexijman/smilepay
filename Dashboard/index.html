@@ -11,14 +11,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
+    <script type="text/javascript" src="./scripts/charts.js" defer></script>
+
     <style>
         .chart-container {
-            width: 50%;
+            width: 100%;
             height: 50%;
-            margin: auto;
         }
     </style>
-    
 
 </head>
 
@@ -32,7 +32,7 @@
         <!-- 1. Nav Component -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-            <div class="container-fluid">
+            <div class="container-fluid" style="background-color: #637A9F;">
 
                 <!--Collapsing button-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -82,7 +82,15 @@
                             </div>
 
                             <div>
-                                <h6 class="ms-2">Profile</h6>
+                                <h6 class="ms-1">Profile</h6>
+                            </div>
+
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-bell-fill ms-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
+                                </svg>
                             </div>
 
                         </div>
@@ -96,12 +104,13 @@
             </div>
         </nav>
 
+        <!-- 2.Second Level Container -->
         <div class="container-fluid">
-            <!-- 2.Second Level Container -->
+
             <div class="row" style="height: 100vh;">
 
                 <!-- Sidebar (takes 2 part) -->
-                <div class="col-lg-2 col-md-4 col-4">
+                <div class="col-lg-2 col-md-2 col-sm-2">
                     <ul class="list-unstyled p-2">
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
@@ -109,16 +118,18 @@
                                 <path
                                     d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z" />
                             </svg>
-                            <a class="fw-light text-decoration-none">Dashboard</a>
+                            <a class="fw-light text-decoration-none" style="color:black;">Dashboard</a>
                         </li>
+                        <br>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-send" viewBox="0 0 16 16">
                                 <path
                                     d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
                             </svg>
-                            <a class="fw-light text-decoration-none">Transactions</a>
+                            <a class="fw-light text-decoration-none" style="color:black;">Transactions</a>
                         </li>
+                        <br>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                 class="bi bi-credit-card" viewBox="0 0 16 16">
@@ -126,27 +137,29 @@
                                     d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
                                 <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
                             </svg>
-                            <a class="fw-light text-decoration-none">Payment</a>
+                            <a class="fw-light text-decoration-none" style="color:black;">Payment</a>
                         </li>
+                        <br>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                 class="bi bi-lightbulb" viewBox="0 0 16 16">
                                 <path
                                     d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1" />
                             </svg>
-                            <a class="fw-light text-decoration-none">Planning</a>
+                            <a class="fw-light text-decoration-none" style="color:black;">Planning</a>
                         </li>
+                        <br>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                 class="bi bi-gear-fill" viewBox="0 0 16 16">
                                 <path
                                     d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
                             </svg>
-                            <a class="fw-light text-decoration-none">Settings</a>
+                            <a class="fw-light text-decoration-none" style="color:black;">Settings</a>
                         </li>
-
+                        <br>
                         <hr>
-
+                        <br>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                 class="bi bi-info-circle" viewBox="0 0 16 16">
@@ -154,8 +167,9 @@
                                 <path
                                     d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
                             </svg>
-                            <a class="fw-light text-decoration-none">Help</a>
+                            <a class="fw-light text-decoration-none" style="color:black;">Help</a>
                         </li>
+                        <br>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                 class="bi bi-box-arrow-right" viewBox="0 0 16 16">
@@ -164,7 +178,7 @@
                                 <path fill-rule="evenodd"
                                     d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
                             </svg>
-                            <a class="fw-light text-decoration-none">Logout</a>
+                            <a class="fw-light text-decoration-none" style="color:black;">Logout</a>
                         </li>
 
 
@@ -173,10 +187,9 @@
 
 
                 <!-- Right Body Container (takes 10 part) -->
-                <div class="col-lg-10 col-md-8 col-8">
+                <div class="col-lg-10 col-md-8 col-10">
 
-                    <div class="container-fluid px-4">
-
+                    <div class="container-fluid">
 
                         <!-- Right side major container 1 -->
                         <div class="row">
@@ -265,39 +278,46 @@
                                 </div>
                             </div>
 
+                            <!-- Spacing for chart ( full-12 ) -->
+                            <div class="card col-12 text-center p-5">
 
-                            <div class="card col-12 text-center">
+                                <canvas id="chart"></canvas>
 
-                                <div class="card chart-container">
+                            </div>
 
-                                    <script>
-                                        const ctx = document.getElementById("chart").getContext('2d');
-                                        const myChart = new Chart(ctx, {
-                                            type: 'line',
-                                            data: {
-                                                labels: ["sunday", "monday", "tuesday",
-                                                    "wednesday", "thursday", "friday", "saturday"],
-                                                datasets: [{
-                                                    label: 'Last week',
-                                                    backgroundColor: 'rgba(161, 198, 247, 1)',
-                                                    borderColor: 'rgb(47, 128, 237)',
-                                                    data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
-                                                }]
-                                            },
-                                            options: {
-                                                scales: {
-                                                    yAxes: [{
-                                                        ticks: {
-                                                            beginAtZero: true,
-                                                        }
-                                                    }]
-                                                }
-                                            },
-                                        });
-                                    </script>
+                            <!-- Spacing for Transaction ( lg-6 )-->
+                            <div class="card col-lg-6 col-md-6 col-12 text-left p-5">
+                                <h3>Transaction</h3>
+                                <div class="card-body">
+                                    <h6 class="card-title">Investment Banking</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 50%;"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">$5000/$10000</div>
+                                    </div>
+                                    <br>
+                                    
+                                    <h6 class="card-title">World Tour</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%;"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">$7500/$10000</div>
+                                    </div>
+                                    <br>
+                                    <h6 class="card-title">Private Equity</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 55%;"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">$5500/$10000</div>
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
 
-                                    <canvas id="chart" style="color:inherit"></canvas>
 
+                            <!-- Spacing for Planning  ( full-12 )-->
+                            <div class="card col-lg-6 col-md-6 col-12 p-5 text-center">
+
+                                <h3>Payment</h3>
+                                <div class="card-body">
+                                    <img src="./Properties/Payment.png" class="img-responsive" alt="payment">
                                 </div>
 
                             </div>
